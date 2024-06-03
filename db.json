@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "text": "desenvimento ",
+      "budget": "50000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": null,
+      "services": [
+        {
+          "name": "arrumar  um programador",
+          "cost": "600",
+          "description": "programa ",
+          "id": "725df939-b6fb-4442-be54-c0d459ae9b92"
+        },
+        {
+          "id": "ce00f44b-9f9f-4a31-bfe6-4351e9f62109"
+        }
+      ],
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Desing"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
+}
