@@ -1,0 +1,10 @@
+.bnt_container {
+  background-color: #222;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
