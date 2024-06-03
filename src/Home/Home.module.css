@@ -1,0 +1,36 @@
+.home_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.home_container h1 {
+  font-size: 3rem;
+}
+
+.home_container p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  font-weight: 500;
+  color: rgb(83, 83, 83);
+}
+
+.home_container span {
+  padding: 0.4rem 1rem;
+  background-color: rgb(26, 26, 26);
+  color: rgba(255, 182, 45, 0.979);
+  transition: 0.5s;
+}
+
+.home_container span:hover {
+  background-color: rgba(255, 182, 45, 0.979);
+  color: rgb(26, 26, 26);
+  transition: 0.5s;
+}
+
+.home_container img {
+  height: 33rem;
+}
