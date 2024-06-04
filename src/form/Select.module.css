@@ -1,0 +1,14 @@
+.select_container {
+  margin-top: 2rem;
+}
+.select_container {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.select_box {
+  height: 2.2rem;
+  width: 90%;
+  padding-left: 1rem;
+  color: grey;
+}

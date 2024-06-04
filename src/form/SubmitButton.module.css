@@ -1,0 +1,19 @@
+.submit_container {
+  margin-top: 2rem;
+}
+
+.submit_box {
+  height: 3rem;
+  width: 8rem;
+  border: none;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.submit_box:hover {
+  background-color: rgba(255, 182, 45, 0.979);
+  color: #222;
+  transition: 0.5s;
+}

@@ -19,24 +19,35 @@
           "id": "ce00f44b-9f9f-4a31-bfe6-4351e9f62109"
         }
       ],
-      "id": 3
+      "id": "3"
+    },
+    {
+      "id": "f86f",
+      "text": "test",
+      "budget": "100",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Infra"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Desenvolvimento"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Desing"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Planejamento"
     }
   ]

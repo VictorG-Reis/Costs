@@ -1,0 +1,18 @@
+.input_container {
+  margin-top: 1.6rem;
+}
+
+.input_container label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.input_box {
+  height: 2rem;
+  width: 90%;
+  padding: 1.3rem;
+  border: none;
+}
+.form_container {
+  margin-bottom: 1rem;
+}
