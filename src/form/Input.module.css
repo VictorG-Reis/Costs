@@ -1,18 +1,30 @@
-.input_container {
-  margin-top: 1.6rem;
+.form__group {
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
 }
 
-.input_container label {
-  font-weight: bold;
-  font-size: 1.1rem;
+.form__label {
+  font-weight: 700;
 }
 
-.input_box {
-  height: 2rem;
-  width: 90%;
-  padding: 1.3rem;
-  border: none;
+.form__field {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1rem;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: 0.2s;
 }
-.form_container {
-  margin-bottom: 1rem;
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 2px;
+  border-image: linear-gradient(to right, #000000, #7c7c7c);
+  transition: 0.2s;
+  border-image-slice: 1;
 }

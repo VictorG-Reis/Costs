@@ -26,8 +26,7 @@ function NewProjects() {
   return (
     <div className={styles.formProject_container}>
       <div className={styles.formTitles}>
-        <h1>Crie seu novo projeto</h1>
-        <p>Crie seu projeto para depois adicionar serviços</p>
+        <h1>Crie seu projeto para depois adicionar serviços</h1>
       </div>
 
       <div className={styles.formProject}>

@@ -1,10 +1,9 @@
 import Styles from './Input.module.css'
 
-function Input({name, text, handleOnChange, value, placeholder}){
+function Input({name, handleOnChange, value, placeholder}){
   return(
-    <div className={Styles.input_container}>
-      <label htmlFor={name}>{text}</label>
-      <input type="text" name={name} onChange={handleOnChange} value={value} placeholder={placeholder} className={Styles.input_box} />
+    <div className={Styles.form__group}>
+      <input type="text" name={name} onChange={handleOnChange} value={value} placeholder={placeholder} className={Styles.form__field}  required/>
     </div>
   )
 }
