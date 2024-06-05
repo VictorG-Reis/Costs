@@ -5,10 +5,14 @@ import styles from './Home.module.css'
 function Home() {
   return(
     <section className={styles.home_container}>
-      <h1>Bem vindo ao <span>costs!</span></h1>
-      <p>faca seu projeto</p>
-      <Button to='/newProject' text='criar projeto'/>
-      <img src={savingsLogo} alt="logo costs" />
+      <div className={styles.home_infos}>
+        <h1>Bem vindo ao <span>costs!</span></h1>
+        <p>Faça seu projeto</p>
+        <Button to='/newProject' text='Criar projeto'/>
+      </div>
+      <div className={styles.home_image}>
+        <img src={savingsLogo} alt="logo costs" />
+      </div>
     </section>
   )
 }

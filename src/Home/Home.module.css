@@ -1,10 +1,17 @@
 .home_container {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: column;
   text-align: center;
+  padding: 100px 20px;
+  margin-top: 60px;
+  background: linear-gradient(to right, #efefef, #efefef);
+  border-radius: 1rem;
+  color: black;
+}
+
+.home_infos {
+  width: 33rem;
 }
 
 .home_container h1 {
@@ -13,14 +20,15 @@
 
 .home_container p {
   font-size: 1.5rem;
-  margin-top: 10px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 500;
   color: rgb(83, 83, 83);
 }
 
 .home_container span {
   padding: 0.4rem 1rem;
-  background-color: rgb(26, 26, 26);
+  background-color: #1a1a1a;
   color: rgba(255, 182, 45, 0.979);
   transition: 0.5s;
 }
@@ -33,4 +41,5 @@
 
 .home_container img {
   height: 33rem;
+  width: 60rem;
 }
