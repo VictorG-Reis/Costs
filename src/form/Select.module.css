@@ -1,14 +1,15 @@
 .select_container {
   margin-top: 2rem;
-}
-.select_container {
+  position: relative;
+  font-size: 1rem;
   font-weight: bold;
-  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .select_box {
   height: 2.2rem;
-  width: 90%;
+  width: 30%;
   padding-left: 1rem;
-  color: grey;
+  color: black;
 }
