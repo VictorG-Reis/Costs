@@ -44,6 +44,7 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
 
         <div className={styles.form_inputs}>
           <h1>Crie seu novo projeto</h1>
+          <p>Crie seu projeto para depois adicionar serviços</p>
 
           <Input type='text' name='text' placeholder='Nome do projeto' text='Nome do projeto' handleOnChange={handleChange} 
           value={projects.name} />

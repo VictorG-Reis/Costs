@@ -1,6 +1,6 @@
 .form_container {
-  height: 30rem;
-  width: 55rem;
+  height: 35rem;
+  width: 60rem;
   padding: 2.5rem;
   margin-bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.055);
@@ -12,9 +12,19 @@
 }
 
 .form_inputs {
-  width: 80%;
+  width: 75%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+}
+
+.form_inputs h1 {
+  font-size: 1.8rem;
+}
+
+.form_inputs p {
+  color: rgb(90, 86, 86);
+  font-weight: 500;
+  margin-left: 3px;
 }

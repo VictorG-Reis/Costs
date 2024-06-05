@@ -5,19 +5,9 @@
   width: 100%;
 }
 
-.formTitles h1 {
-  font-size: 2.4rem;
-}
-
-.formTitles p {
-  color: rgb(90, 86, 86);
-  font-weight: 500;
-  margin-left: 15px;
-}
-
 .formProject {
   display: flex;
-  margin: 6rem auto;
+  margin: 5.5rem auto;
   justify-content: center;
   align-items: center;
 }
