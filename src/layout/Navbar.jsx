@@ -15,7 +15,7 @@ function Navbar() {
 
         <ul className={styles.navbar_ul}>
           <li className={styles.navbar_link}> <Link to="/">Home</Link></li>
-          <li className={styles.navbar_link}>Projetos</li>
+          <li className={styles.navbar_link}> <Link to='/projects'>Projetos</Link></li>
           <li className={styles.navbar_link}><Link to='/newProject'>Criar projetos</Link></li>
         </ul>
 

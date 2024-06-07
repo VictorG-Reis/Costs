@@ -9,11 +9,12 @@
   background-color: #222;
   color: white;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.4s;
+  font-size: 0.85rem;
 }
 
 .submit_box:hover {
   background-color: rgba(255, 182, 45, 0.979);
   color: #222;
-  transition: 0.5s;
+  transition: 0.4s;
 }

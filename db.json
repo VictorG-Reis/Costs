@@ -31,6 +31,17 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "9a12",
+      "text": "projeto 1",
+      "budget": "10.930",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [

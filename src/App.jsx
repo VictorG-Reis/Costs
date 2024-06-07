@@ -1,9 +1,11 @@
-import Home from './Home/Home'
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import NewProjects from './pages/NewProjects'
+import Projects from './pages/Projects'
 import Navbar from './layout/Navbar'
 import Conteiner from './layout/Container'
-import NewProjects from './Home/NewProjects'
+import { Routes, Route } from 'react-router-dom'
+
+import './App.css'
 
 function App() {
 
@@ -15,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/newProject' element={<NewProjects/>}/>
+          <Route path='/projects' element={<Projects/>}/>
         </Routes>
       </Conteiner>
 

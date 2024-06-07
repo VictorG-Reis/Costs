@@ -25,9 +25,6 @@ function NewProjects() {
 
   return (
     <div className={styles.formProject_container}>
-      <div className={styles.formTitles}>
-        
-      </div>
 
       <div className={styles.formProject}>
         <ProjectForm handleSubmit={createPost} btnName='Criar projeto'/>

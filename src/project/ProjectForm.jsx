@@ -43,13 +43,13 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
       <form onSubmit={submit} className={styles.form_container}>
 
         <div className={styles.form_inputs}>
-          <h1>Crie seu novo projeto</h1>
+          <h1>Seu novo projeto</h1>
           <p>Crie seu projeto para depois adicionar serviços</p>
 
-          <Input type='text' name='text' placeholder='Nome do projeto' text='Nome do projeto' handleOnChange={handleChange} 
+          <Input type='text' name='text' placeholder='Insira o nome do projeto' text='Nome do projeto' handleOnChange={handleChange} 
           value={projects.name} />
 
-          <Input type='number' name='budget' placeholder='Valor do projeto' text='Valor do projeto' handleOnChange={handleChange} 
+          <Input type='number' name='budget' placeholder='Insira o Valor do projeto' text='Valor do projeto' handleOnChange={handleChange} 
           value={projects.budget? projects.budget:''}/>
 
           <Select name="project_id" text='Selecione uma opção:' handleChange={handleSelect} value={projects.category ? projects.category.id : ''} options={categories} />
