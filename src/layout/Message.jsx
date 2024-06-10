@@ -18,8 +18,9 @@ function Message({msg, type}) {
     return () => clearTimeout(timer)
   },[msg])
   return(
+    //visible && 
     <>
-      {visible && (
+      {visible &&(
         <div className={`${styles.messageConteiner} ${styles[type]}`}>{msg}</div>
       )}
     </>
