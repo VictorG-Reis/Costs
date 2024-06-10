@@ -4,10 +4,13 @@ import Select from "../form/Select"
 import SubmitButton from "../form/SubmitButton"
 
 import styles from './ProjectForm.module.css'
+import Message from "../layout/Message"
 
 function ProjectForm({projectData, handleSubmit, btnName}) {
   const [categories, setCategories] = useState([])
   const [projects, setProjects] = useState({projectData})
+  const [emptyImput, setEmptyImput] = useState(false)
+  
 
   useEffect(()=>{
     fetch('http://localhost:5000/categories', {
@@ -22,11 +25,18 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
 
   const submit = (e) =>{
     e.preventDefault()
+    if(projects.text == null ||
+      projects.text.length <= 3 ||
+      projects.budget == null ||
+      projects.budget.length == 0) {
+      return setEmptyImput(true)
+    }
     handleSubmit(projects)
   }
 
   const handleChange = (e) => {
     setProjects({...projects, [e.target.name] : e.target.value})
+    console.log(projects);
   }
 
   function handleSelect(e){
@@ -40,6 +50,10 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
 
   return(
     <>
+      <div className={styles.errorMessage}>
+        {emptyImput && <Message type='error' msg='Algum dos campos estão vazios'/>}
+      </div>
+
       <form onSubmit={submit} className={styles.form_container}>
 
         <div className={styles.form_inputs}>
@@ -52,7 +66,7 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
           <Input type='number' name='budget' placeholder='Insira o Valor do projeto' text='Valor do projeto' handleOnChange={handleChange} 
           value={projects.budget? projects.budget:''}/>
 
-          <Select name="project_id" text='Selecione uma opção:' handleChange={handleSelect} value={projects.category ? projects.category.id : ''} options={categories} />
+          <Select name="project_id" text='Selecione uma opção:' handleChange={handleSelect} value={projects.category? projects.category.id : ''} options={categories}  />
 
           <SubmitButton text={btnName}/>
         </div>

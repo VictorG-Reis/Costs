@@ -1,32 +1,37 @@
 import { useEffect, useState } from "react"
 import Button from "../layout/Button"
 import Conteiner from "../layout/Container"
-import { useLocation } from "react-router-dom"
+//import { useLocation } from "react-router-dom"
+import Message from "../layout/Message"
+import ProjectCard from "../project/ProjectCard"
+import Loading from "../layout/Loading"
 
 function Projects() {
   
-  const [projects, setProjects] = useState([])
+  const [Projects, setProjects] = useState([])
   const [RemoveLoading, setRemoveLoading] = useState(false)
   const [MessageProject, setMessageProject] = useState('')
   
-  const location = useLocation()
+  //const location = useLocation()
 
-  let message = ''
-  if(location.state){
-    message= location.state.message
-  }
+  // let message = ''
+  // if(location.state){
+  //   message= location.state.message
+  // }
 
 
   useEffect(() => {
     setTimeout(() => {
       fetch('http://localhost:5000/projects', {
         method: 'GET',
-        headers: {'Content-Type': 'application/json',}
+        headers:{
+        'Content-Type': 'application/json',
+        },
       })
       .then((resp) => resp.json())
       .then((dados) => {
         setProjects(dados)
-        setMessageProject(true)
+        setRemoveLoading(true)
       })
       .catch((err) => console.log(err))
     }, 1000)
@@ -40,7 +45,7 @@ function Projects() {
     })
     .then((resp) => resp.json())
     .then(() => {
-      setProjects(projects.filter((project) => project.id !== id))
+      setProjects(Projects.filter((project) => project.id !== id))
       setMessageProject('Projeto deletado com sucesso!')
     })
     .catch((err) => console.log(err))
@@ -55,8 +60,24 @@ function Projects() {
       </div>
 
       <Conteiner customClass='start'>
-
-
+        {MessageProject && <Message msg={MessageProject} type='success'/>}
+        {
+          Projects.length > 0 &&
+          Projects.map((project) => (
+            <ProjectCard
+            key={project.id}
+            text={project.text}
+            budget={project.budget}
+            category={project.category?.name || 'Infra'}
+            id={project.id}
+            handleRemove={removeProject}
+            />
+          ))
+        }
+        {!RemoveLoading && <Loading/>}
+        {RemoveLoading && Projects == 0 && (
+          <p>Não há projetos cadastrados</p>
+        )}
       </Conteiner>
     </div>
   )

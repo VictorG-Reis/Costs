@@ -28,3 +28,9 @@
   font-weight: 500;
   margin-bottom: 1.8rem;
 }
+
+.errorMessage {
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+}
