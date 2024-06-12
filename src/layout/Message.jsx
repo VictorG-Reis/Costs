@@ -13,12 +13,11 @@ function Message({msg, type}) {
 
     const timer = setTimeout(() => {
       setVisible(false)
-    }, 3000)
+    }, 3500)
 
     return () => clearTimeout(timer)
   },[msg])
   return(
-    //visible && 
     <>
       {visible &&(
         <div className={`${styles.messageConteiner} ${styles[type]}`}>{msg}</div>

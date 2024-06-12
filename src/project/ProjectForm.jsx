@@ -50,7 +50,7 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
 
   return(
     <>
-      <div className={styles.errorMessage}>
+      <div className={styles.messagePosition}>
         {emptyImput && <Message type='error' msg='Preencha os campos vazios'/>}
       </div>
 

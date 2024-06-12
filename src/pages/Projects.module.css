@@ -8,3 +8,9 @@
   justify-content: space-between;
   margin-bottom: 1em;
 }
+
+.messagePosition {
+  position: absolute;
+  top: 5.5rem;
+  right: 50rem;
+}

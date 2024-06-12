@@ -12,7 +12,7 @@ function Projects() {
   
   const [Projects, setProjects] = useState([])
   const [RemoveLoading, setRemoveLoading] = useState(false)
-  const [MessageProject, setMessageProject] = useState('')
+  const [MessageProject, setMessageProject] = useState(false)
   
   //const location = useLocation()
 
@@ -34,10 +34,12 @@ function Projects() {
       .then((dados) => {
         setProjects(dados)
         setRemoveLoading(true)
+
       })
       .catch((err) => console.log(err))
     }, 1000)
   },[])
+
 
 
   const removeProject = (id) => {
@@ -48,7 +50,10 @@ function Projects() {
     .then((resp) => resp.json())
     .then(() => {
       setProjects(Projects.filter((project) => project.id !== id))
-      setMessageProject('Projeto deletado com sucesso!')
+      setMessageProject(true)
+      setTimeout(() => {
+          setMessageProject(false);
+        }, 4000);
     })
     .catch((err) => console.log(err))
     
@@ -62,7 +67,9 @@ function Projects() {
       </div>
 
       <Conteiner customClass='start'>
-        {MessageProject && <Message msg={MessageProject} type='success'/>}
+        <div className={styles.messagePosition}>
+        {MessageProject && <Message msg='Projeto deletado com sucesso!' type='success'/>}
+        </div>
         {
           Projects.length > 0 &&
           Projects.map((project) => (
