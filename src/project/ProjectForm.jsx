@@ -26,17 +26,17 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
   const submit = (e) =>{
     e.preventDefault()
     if(projects.text == null ||
-      projects.text.length <= 3 ||
       projects.budget == null ||
       projects.budget.length == 0) {
       return setEmptyImput(true)
+      
     }
     handleSubmit(projects)
   }
 
   const handleChange = (e) => {
     setProjects({...projects, [e.target.name] : e.target.value})
-    console.log(projects);
+    setEmptyImput(false)
   }
 
   function handleSelect(e){
@@ -51,7 +51,7 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
   return(
     <>
       <div className={styles.errorMessage}>
-        {emptyImput && <Message type='error' msg='Algum dos campos estão vazios'/>}
+        {emptyImput && <Message type='error' msg='Preencha os campos vazios'/>}
       </div>
 
       <form onSubmit={submit} className={styles.form_container}>

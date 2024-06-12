@@ -18,12 +18,12 @@ function ProjectCard({id,text, budget, category, handleRemove}) {
       </p>
 
       <p className={styles.category_text}>
-        <span className={`${styles[category]}`}>{category}</span>
+        <span className={`${styles[category]}`}></span>{category}
       </p>
- 
+
       <div className={styles.bntsCards}>
-        <Link to={`/project/${id}`}><FaPen/>Editar</Link>
-        <button onClick={remove}><FaTrash/>Remover</button>
+        <Link to={`/project/${id}`}><FaPen fontSize="1.2em"/> Editar </Link>
+        <button onClick={remove} ><FaTrash fontSize="1.2em"/> Remover</button>
       </div> 
     </div>
   )

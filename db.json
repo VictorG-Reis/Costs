@@ -21,6 +21,17 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "24f9",
+      "text": "Estrutura ",
+      "budget": "2.000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [

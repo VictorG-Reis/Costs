@@ -11,6 +11,7 @@
   padding: 0.4em;
   margin-bottom: 1.3em;
   font-size: 1.3em;
+  text-align: center;
 }
 
 .project_card p {
@@ -45,7 +46,14 @@
   background-color: #b4f8c8;
 }
 .category_text .Planejamento {
-  background-color: #fbe7c6;
+  background-color: #ffd899;
+}
+
+.bntsCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .bntsCards a,
@@ -58,9 +66,10 @@
   transition: 0.5s;
   cursor: pointer;
   margin-right: 1rem;
-
   justify-content: center;
   align-items: center;
+  text-align: center;
+  font-size: 14px;
 }
 .bntsCards a:hover,
 .bntsCards button:hover {

@@ -27,3 +27,11 @@
   transition: 0.2s;
   border-image-slice: 1;
 }
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}

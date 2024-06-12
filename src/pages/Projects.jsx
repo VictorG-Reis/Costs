@@ -6,6 +6,8 @@ import Message from "../layout/Message"
 import ProjectCard from "../project/ProjectCard"
 import Loading from "../layout/Loading"
 
+import styles from './Projects.module.css'
+
 function Projects() {
   
   const [Projects, setProjects] = useState([])
@@ -53,8 +55,8 @@ function Projects() {
   }
 
   return(
-    <div>
-      <div>
+    <div className={styles.projects_container}>
+      <div className={styles.projects_title}>
         <h1>Meus Projetos</h1>
         <Button text='criar projeto' to='/newProject'/>
       </div>
