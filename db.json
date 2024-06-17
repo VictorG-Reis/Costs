@@ -1,5 +1,28 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "60d6",
+      "text": "aplicação",
+      "budget": "1000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "0925",
+      "text": "contratação",
+      "budget": "5000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
   "categories": [
     {
       "id": "1",
