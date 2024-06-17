@@ -1,0 +1,53 @@
+.ProjectInfo_Container {
+  padding: 1rem;
+  width: 100%;
+  overflow-y: visible;
+}
+
+.ProjectInfo_Container h1 {
+  background-color: #222;
+  color: #ffbb33;
+  padding: 0.5rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  height: 5rem;
+  width: 30rem;
+}
+.resolve {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #222;
+  border: none;
+  color: #ffbb33;
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+}
+
+.btn:hover {
+  background-color: #ffbb33;
+  color: #222;
+  transition: 0.5s;
+}
+
+.info_Conteiner {
+  width: 100%;
+
+  flex-wrap: wrap;
+  border-bottom: #222 1px solid;
+}
+
+.info_Conteiner p {
+  margin-bottom: 0.5rem;
+}
+
+.info_Conteiner span {
+  font-weight: bold;
+}
