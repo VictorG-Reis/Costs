@@ -9,6 +9,7 @@ import ProjectForm from "../project/ProjectForm"
 import Loading from "../layout/Loading"
 import ServiceForm from "../service/ServiceForm"
 import ServiceCard from "../service/ServiceCard"
+import { v4 as uuidv4 } from 'uuid';
 
 function Project() {
   const {id} = useParams()
@@ -32,6 +33,7 @@ function Project() {
         setService(data.services)
         setEditProject(data)
         console.log(Service.length);
+        console.log(EditProject);
       })
       .catch((erro) => console.log(erro))
     },500)
@@ -44,14 +46,13 @@ function Project() {
 
     const lastService = project.services[project.services.length - 1]
     
-    lastService.id = 1
+    lastService.id = uuidv4()
 
     const lastServiceCost = lastService.cost
     
     const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
 
-
-    if(newCost > parseFloat(project.cost)) {
+    if(newCost > parseFloat(project.budget)) {
       setMessage('Valor do serviço está acima do orçamento')
       setTypeMessage('error')
       project.services.pop()
@@ -125,9 +126,6 @@ function Project() {
     })
     .catch((err)=> console.log(err))
   }
-
-
-
 
   return(
     <>
