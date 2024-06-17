@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { uuid } from "uuidv4"
+
 
 import styles from './Project.module.css'
 import Conteiner from "../layout/Container"
 import Message from "../layout/Message"
 import ProjectForm from "../project/ProjectForm"
 import Loading from "../layout/Loading"
+import ServiceForm from "../service/ServiceForm"
+import ServiceCard from "../service/ServiceCard"
 
 function Project() {
   const {id} = useParams()
@@ -19,11 +21,30 @@ function Project() {
   const [TypeMessage, setTypeMessage] = useState()
 
 
+  useEffect(() => {
+    setTimeout(() => {
+      fetch(`http://localhost:5000/projects/${id}`, {
+        method: 'GET',
+        headers: {'Content-Type':'application/json'}
+      })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setService(data.services)
+        setEditProject(data)
+        console.log(Service.length);
+      })
+      .catch((erro) => console.log(erro))
+    },500)
+
+  }, [id])
+
+
   const createService = (project) => {
     setMessage('')
+
     const lastService = project.services[project.services.length - 1]
     
-    lastService.id = uuid()
+    lastService.id = 1
 
     const lastServiceCost = lastService.cost
     
@@ -105,21 +126,7 @@ function Project() {
     .catch((err)=> console.log(err))
   }
 
-  useEffect(() => {
-    setTimeout(() => {
-      fetch(`http://localhost:5000/${id}`, {
-        method: 'GET',
-        headers: {'Content-Type':'application/json'}
-      })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setService(data.service)
-        setEditProject(data)
-      })
-      .catch((erro) => console.log(erro))
-    },500)
 
-  }, [id])
 
 
   return(
@@ -128,13 +135,12 @@ function Project() {
       <div className={styles.ProjectInfo_Container}>
         <Conteiner custonClass='column'/>
         {Message && <Message msg={message} type={TypeMessage}/>}
-         <div className={styles.info_Conteiner}>
+
+          <div className={styles.info_Conteiner}>
             <div className={styles.resolve}>
               <h1>Projeto: {EditProject.text}</h1>
                 <button className={styles.btn} onClick={toggleProjectForm}>
-                  {!ShowProjectForm? 'Editar projeto':
-                  'Fechar'
-                  }
+                  {!ShowProjectForm ? 'Editar projeto': 'Fechar'}
                 </button>
             </div>
               {!ShowProjectForm? (
@@ -166,10 +172,10 @@ function Project() {
             </div>
           </div>
               <h2>Serviços</h2>
-            <Conteiner custonClass='start'>
-            {Service.length > 0 && 
+              <Conteiner custonClass='start'>
+              {
               Service.map((service)=> (
-              <ServiceCard 
+              <ServiceCard
               name = {service.name}
               cost ={service.cost}
               description={service.description}
@@ -177,10 +183,9 @@ function Project() {
               key={service.id}
               handleRemove={RemoveService}
               />   
-              
               ))
             }
-            {Service.length ===0 && <p>Não há serviços cadastrados  </p>}
+            {Service.length === 0 && <p>Não há serviços cadastrados  </p>}
             </Conteiner>
           
         <Conteiner/>

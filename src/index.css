@@ -15,7 +15,7 @@ body,
 
   overflow-y: hidden;
 }
-/* Isso esta colocando flex em todas as listas se precisar mudar depois pô  */
+
 ul {
   display: flex;
 }

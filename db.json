@@ -2,14 +2,20 @@
   "projects": [
     {
       "id": "60d6",
-      "text": "aplicação",
+      "text": "test",
       "budget": "1000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": []
+      "cost": null,
+      "services": [
+        {
+          "name": "pipipopo",
+          "cost": "10",
+          "id": 1
+        }
+      ]
     },
     {
       "id": "0925",

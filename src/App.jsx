@@ -8,6 +8,7 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Project from './pages/Project'
 
+
 function App() {
 
   return (
@@ -19,7 +20,7 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/newProject' element={<NewProjects/>}/>
           <Route path='/projects' element={<Projects/>}/>
-          <Route path='/project/id' element={<Project/>}/>
+          <Route path='/project/:id' element={<Project/>}/>
         </Routes>
       </Conteiner>
 
