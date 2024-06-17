@@ -42,7 +42,7 @@ function Project() {
 
 
   const createService = (project) => {
-    setMessage('')
+    project.cost = 0
 
     const lastService = project.services[project.services.length - 1]
     
@@ -130,9 +130,11 @@ function Project() {
   return(
     <>
     {EditProject.text ? (
-      <div className={styles.ProjectInfo_Container}>
+      <div className={styles.ProjectInfo_Container }>
         <Conteiner custonClass='column'/>
-        {Message && <Message msg={message} type={TypeMessage}/>}
+        <div className={styles.messagePosition}>
+          {message && <Message msg={message} type={TypeMessage}/>}
+        </div>
 
           <div className={styles.info_Conteiner}>
             <div className={styles.resolve}>

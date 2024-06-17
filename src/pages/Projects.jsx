@@ -34,7 +34,6 @@ function Projects() {
       .then((dados) => {
         setProjects(dados)
         setRemoveLoading(true)
-
       })
       .catch((err) => console.log(err))
     }, 1000)

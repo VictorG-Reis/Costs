@@ -51,3 +51,9 @@
 .info_Conteiner span {
   font-weight: bold;
 }
+
+.messagePosition {
+  position: absolute;
+  top: 5.5rem;
+  right: 1rem;
+}

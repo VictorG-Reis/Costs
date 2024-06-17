@@ -4,12 +4,20 @@ import Input from "../form/Input"
 import SubmitButton from "../form/SubmitButton"
 
 import styles from '../form/Input.module.css'
+import Message from "../layout/Message"
 
 function ServiceForm({handleSubmit, btnText, projectData}){
   const [Service, setService] = useState({})
+  const [emptyImput, setEmptyImput] = useState(false)
 
   function submit(e){
     e.preventDefault()
+    if(Service.name == null ||
+      Service.cost == null ||
+      Service.cost.length == 0) {
+      return setEmptyImput(true)
+      
+    }
     projectData.services.push(Service)
     handleSubmit(projectData)
     
@@ -18,11 +26,16 @@ function ServiceForm({handleSubmit, btnText, projectData}){
 
   function handleChange(e){
     setService({...Service, [e.target.name]: e.target.value})
+    setEmptyImput(false)
+      console.log(Service);
   }
 
 
   return(
     <form onSubmit={submit} className={styles.form_container}> 
+    <div className={styles.messagePosition}>
+        {emptyImput && <Message type='error' msg='Preencha os campos vazio'/>}
+      </div>
       <Input
         type='text'
         name='name'
