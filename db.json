@@ -16,17 +16,6 @@
           "id": "39cf145a-5fd4-4554-8740-65f685d32d5c"
         }
       ]
-    },
-    {
-      "id": "76cb",
-      "text": "projeto 1",
-      "budget": "5000",
-      "category": {
-        "id": "3",
-        "name": "Desing"
-      },
-      "cost": 0,
-      "services": []
     }
   ],
   "categories": [

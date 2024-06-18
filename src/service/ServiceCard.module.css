@@ -1,11 +1,11 @@
 .project_card {
-  padding: 1rem;
-  border-radius: 10px;
-  width: 22rem;
-  height: 15rem;
+  padding: 1em;
+  border-radius: 5px;
+  width: 320px;
+  height: 200px;
   margin: 0.5%;
   background-color: #e2e2e2;
-  box-shadow: 5px 4px 7.7px #00000042;
+  box-shadow: 5px 4px 7.7px #00000025;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,8 +64,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 14rem;
-  height: 3.4rem;
+  width: 149px;
+  height: 50px;
 }
 
 .bntsCards a,
@@ -85,8 +85,8 @@
   font-family: "Inter", sans-serif;
   font-weight: 600;
   border-radius: 16px;
-  width: 20rem;
-  height: 3.4rem;
+  width: 120px;
+  height: 45px;
 }
 
 .bntsCards a:hover,
