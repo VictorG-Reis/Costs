@@ -22,8 +22,6 @@ function ServiceCard({name, cost, description, id, handleRemove}){
           Remover 
         </button>
       </div>
-
-    
     </div>
   )
 }
