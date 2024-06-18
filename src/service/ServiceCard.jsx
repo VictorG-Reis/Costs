@@ -13,7 +13,7 @@ function ServiceCard({name, cost, description, id, handleRemove}){
   return(
     <div className={styles.project_card}>
       <h4>{name}</h4>
-      <p><span>Custo do serviço</span> R$ {cost}</p>
+      <p><span>Custo do serviço:</span> R$ {cost}</p>
       
       <p>{description}</p>
       <div className={styles.bntsCards}>

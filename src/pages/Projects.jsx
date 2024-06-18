@@ -62,7 +62,7 @@ function Projects() {
     <div className={styles.projects_container}>
       <div className={styles.projects_title}>
         <h1>Meus Projetos</h1>
-        <Button text='criar projeto' to='/newProject'/>
+        <Button text='Criar projeto' to='/newProject'/>
       </div>
 
       <Conteiner customClass='start'>

@@ -138,7 +138,7 @@ function Project() {
 
           <div className={styles.info_Conteiner}>
             <div className={styles.resolve}>
-              <h1>Projeto: {EditProject.text}</h1>
+              <h1> Projeto: {EditProject.text}</h1>
                 <button className={styles.btn} onClick={toggleProjectForm}>
                   {!ShowProjectForm ? 'Editar projeto': 'Fechar'}
                 </button>
@@ -171,23 +171,24 @@ function Project() {
               )}
             </div>
           </div>
-              <h2>Serviços</h2>
+          <div className={styles.servicesContainer}>
+            <h2>Serviços</h2>
               <Conteiner custonClass='start'>
-              {
-              Service.map((service)=> (
-              <ServiceCard
-              name = {service.name}
-              cost ={service.cost}
-              description={service.description}
-              id={service.id}
-              key={service.id}
-              handleRemove={RemoveService}
-              />   
-              ))
-            }
-            {Service.length === 0 && <p>Não há serviços cadastrados  </p>}
-            </Conteiner>
-          
+                {
+                Service.map((service)=> (
+                <ServiceCard
+                name = {service.name}
+                cost ={service.cost}
+                description={service.description}
+                id={service.id}
+                key={service.id}
+                handleRemove={RemoveService}
+                />   
+                ))
+                }
+                {Service.length === 0 && <p>Não há serviços cadastrados  </p>}
+              </Conteiner>
+          </div>
         <Conteiner/>
       </div>
     ):(

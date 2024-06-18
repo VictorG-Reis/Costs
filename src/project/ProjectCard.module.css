@@ -1,21 +1,31 @@
 .project_card {
   padding: 1em;
-  border: 1px solid #7a7a7a;
   border-radius: 5px;
-  width: 24%;
+  width: 320px;
+  height: 200px;
   margin: 0.5%;
-}
-.project_card h4 {
-  background-color: #222;
-  color: #ffbb33;
-  padding: 0.4em;
-  margin-bottom: 1.3em;
-  font-size: 1.3em;
+  background-color: #e2e2e2;
+  box-shadow: 5px 4px 7.7px #00000025;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
+.project_card h4 {
+  background-color: #000000;
+  color: #ffbb33;
+  width: 15rem;
+  padding: 0.4em;
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  text-align: center;
+  border-radius: 4px;
+}
+
 .project_card p {
-  color: #7a7a7a;
+  color: #000000;
   margin-bottom: 1em;
 }
 .project_card p span {
@@ -59,7 +69,7 @@
 .bntsCards a,
 .bntsCards button {
   padding: 0.6rem 1rem;
-  background-color: #222;
+  background-color: #000000;
   color: #ffbb33;
   border: none;
   text-decoration: none;
@@ -70,10 +80,14 @@
   align-items: center;
   text-align: center;
   font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  border-radius: 16px;
 }
+
 .bntsCards a:hover,
 .bntsCards button:hover {
   background-color: #ffbb33;
-  color: #222;
+  color: #000000;
   transition: 0.5s;
 }

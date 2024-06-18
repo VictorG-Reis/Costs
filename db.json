@@ -8,8 +8,14 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 0,
-      "services": []
+      "cost": 100,
+      "services": [
+        {
+          "name": "desenvolvimento",
+          "cost": "100",
+          "id": "39cf145a-5fd4-4554-8740-65f685d32d5c"
+        }
+      ]
     },
     {
       "id": "76cb",
