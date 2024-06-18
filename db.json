@@ -1,23 +1,5 @@
 {
-  "projects": [
-    {
-      "id": "0925",
-      "text": "contratação",
-      "budget": "5000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 100,
-      "services": [
-        {
-          "name": "desenvolvimento",
-          "cost": "100",
-          "id": "39cf145a-5fd4-4554-8740-65f685d32d5c"
-        }
-      ]
-    }
-  ],
+  "projects": [],
   "categories": [
     {
       "id": "1",

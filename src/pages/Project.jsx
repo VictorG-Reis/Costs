@@ -152,7 +152,7 @@ function Project() {
                 </div>
                 ):(
                   <div className={styles.info_Conteiner}>
-                    <ProjectForm handleSubmit={EditPost} btnText='Editar Projeto'  projectData={Project}/>
+                    <ProjectForm handleSubmit={EditPost} btnName='Editar Projeto'  projectData={Project}/>
                   </div>
                 )}
           </div>
