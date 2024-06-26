@@ -8,10 +8,12 @@ function Navbar() {
   return (
     <nav className={styles.navbar_container}>
       <Conteiner>
-        
-        <Link to='/'>
-          <img src={logo} alt="" />
-        </Link>
+        <div className={styles.imgContainer}>
+          <Link to='/'>
+            <img src={logo} alt="" />
+          </Link>
+        </div>
+      
 
         <ul className={styles.navbar_ul}>
           <li className={styles.navbar_link}> <Link to="/">Home</Link></li>

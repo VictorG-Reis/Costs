@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   background: linear-gradient(to right, #000000, #353535);
   overflow-y: visible;
   height: 5rem;
@@ -19,6 +18,11 @@
   transition: 0.05s;
   font-weight: 500;
   font-weight: bold;
+  width: 82%;
+}
+
+.imgContainer {
+  width: 18%;
 }
 
 .navbar_link:hover {
@@ -45,4 +49,10 @@
   max-width: 4rem;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 300px) and (max-width: 575.98px) {
+  .navbar_container img {
+    max-width: 3rem;
+  }
 }
