@@ -69,19 +69,21 @@ function Projects() {
         <div className={styles.messagePosition}>
         {MessageProject && <Message msg='Projeto deletado com sucesso!' type='success'/>}
         </div>
-        {
-          Projects.length > 0 &&
-          Projects.map((project) => (
-            <ProjectCard
-            key={project.id}
-            text={project.text}
-            budget={project.budget}
-            category={project.category?.name || 'Infra'}
-            id={project.id}
-            handleRemove={removeProject}
-            />
-          ))
-        }
+        <div className={styles.cardContaines}>
+          {
+            Projects.length > 0 &&
+            Projects.map((project) => (
+              <ProjectCard
+              key={project.id}
+              text={project.text}
+              budget={project.budget}
+              category={project.category?.name || 'Infra'}
+              id={project.id}
+              handleRemove={removeProject}
+              />
+            ))
+          }
+        </div>
         <div className={styles.noProjectMessage}>
           {!RemoveLoading && <Loading/>}
           {RemoveLoading && Projects == 0 && (

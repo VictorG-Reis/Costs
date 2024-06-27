@@ -1,12 +1,23 @@
 .projects_container {
   padding: 2em;
   width: 100%;
+  height: 100%;
 }
 
 .projects_title {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1em;
+}
+
+.cardContaines {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 .messagePosition {
@@ -20,6 +31,7 @@
     display: flex;
     text-align: center;
     flex-direction: column;
+    height: 100%;
   }
 
   .projects_title {
@@ -31,6 +43,14 @@
   .noProjectMessage {
     text-align: center;
     width: 100%;
+  }
+
+  .cardContaines {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }
 

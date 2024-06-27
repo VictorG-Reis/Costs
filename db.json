@@ -1,5 +1,45 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "90e7",
+      "text": "nnovo test",
+      "budget": "100",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "ef7f",
+      "text": "text",
+      "budget": "1000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "a3ef",
+      "text": "fsdf",
+      "budget": "32",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "58bf",
+      "text": "fdsfa",
+      "budget": "3424",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "87a6",
+      "text": "fsfd",
+      "budget": "4342",
+      "cost": 0,
+      "services": []
+    }
+  ],
   "categories": [
     {
       "id": "1",
