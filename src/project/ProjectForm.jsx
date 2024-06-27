@@ -40,11 +40,19 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
   }
 
   function handleSelect(e){
+    if(e.target.value == null) {
+      setProjects({...projects, category: {
+      id: e.target.value,
+      name: 'Infra'
+    },
+    })
+    }else{
     setProjects({...projects, category: {
       id: e.target.value,
       name: e.target.options[e.target.selectedIndex].text
     },
     })
+    }
   }
 
 

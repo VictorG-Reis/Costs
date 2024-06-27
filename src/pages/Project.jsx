@@ -33,12 +33,13 @@ function Project() {
         setService(data.services)
         setEditProject(data)
         console.log(Service.length);
-        console.log(EditProject);
+        console.log(data);
       })
       .catch((erro) => console.log(erro))
     },500)
 
   }, [id])
+
 
 
   const createService = (project) => {
@@ -146,7 +147,7 @@ function Project() {
               {!ShowProjectForm? (
                 <div className={styles.info_Conteiner} >
                   <p><span>Categoria do Projeto: </span>
-                    {EditProject.category.name} </p>
+                    {EditProject.category?.name || 'Infra'} </p>
                   <p><span>Valor total do projeto: </span>R${EditProject.budget}</p>
                   <p><span>Valor utilizado no projeto: </span>R${EditProject.cost}</p>
                 </div>
