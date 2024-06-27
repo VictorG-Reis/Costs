@@ -51,6 +51,10 @@
     width: 82%;
   }
 
+  .navbar_link a {
+    font-size: 1rem;
+  }
+
   .imgContainer {
     width: 18%;
   }
