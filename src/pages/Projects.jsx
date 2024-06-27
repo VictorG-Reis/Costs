@@ -82,10 +82,13 @@ function Projects() {
             />
           ))
         }
-        {!RemoveLoading && <Loading/>}
-        {RemoveLoading && Projects == 0 && (
-          <p>Não há projetos cadastrados</p>
-        )}
+        <div className={styles.noProjectMessage}>
+          {!RemoveLoading && <Loading/>}
+          {RemoveLoading && Projects == 0 && (
+            <p >Não há projetos cadastrados</p>
+          )}
+        </div>
+        
       </Conteiner>
     </div>
   )

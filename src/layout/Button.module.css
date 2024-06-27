@@ -9,3 +9,11 @@
   text-decoration: none;
   border-radius: 5px;
 }
+
+@media (min-width: 300px) and (max-width: 575.98px) {
+  .bnt_container {
+    height: 3rem;
+    width: 11rem;
+    text-align: center;
+  }
+}
