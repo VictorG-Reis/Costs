@@ -13,3 +13,12 @@
   padding-left: 1rem;
   color: black;
 }
+@media (min-width: 300px) and (max-width: 575.98px) {
+  .select_box {
+    height: 2.2rem;
+    width: 80%;
+    margin-top: 1rem;
+    margin-left: 1px;
+    color: black;
+  }
+}

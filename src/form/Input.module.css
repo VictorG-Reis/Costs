@@ -41,3 +41,10 @@ input[type="number"] {
   top: 5.5rem;
   right: 1rem;
 }
+
+@media (min-width: 300px) and (max-width: 575.98px) {
+  .form__group {
+    padding: 5px;
+    width: 100%;
+  }
+}
