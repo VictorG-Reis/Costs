@@ -187,7 +187,7 @@ function Project() {
                 />   
                 ))
                 }
-                {Service.length === 0 && <p>Não há serviços cadastrados  </p>}
+                {Service.length === 0 && <p>Não há serviços cadastrados</p>}
               </Conteiner>
           </div>
         <Conteiner/>

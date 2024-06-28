@@ -71,6 +71,25 @@
       "budget": "3123",
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "3b8e",
+      "text": "teste de um nome grande",
+      "budget": "100",
+      "cost": 20,
+      "services": [
+        {
+          "name": "novo servico ",
+          "cost": "10",
+          "description": "servico para testar a aplicaçao",
+          "id": "7b9c486b-62a0-41b4-9307-7cd33390ecdc"
+        },
+        {
+          "name": "servicoboa",
+          "cost": "20",
+          "id": "feb3c1af-ad11-4a21-9bcb-77af6d8f87d0"
+        }
+      ]
     }
   ],
   "categories": [
