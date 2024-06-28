@@ -38,8 +38,8 @@
 
 @media (min-width: 300px) and (max-width: 575.98px) {
   .form_container {
-    height: 37rem;
-    width: 18rem;
+    height: 35rem;
+    width: 17rem;
     box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.25);
     margin-right: 10px;
   }
