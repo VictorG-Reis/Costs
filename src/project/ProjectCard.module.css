@@ -101,6 +101,7 @@
     width: 95%;
     height: 40%;
     box-shadow: 3px 3px 10px #00000042;
+    margin-top: 3rem;
   }
 
   .project_card h4 {
@@ -112,5 +113,11 @@
 
   .bntsCards {
     margin-left: 1rem;
+    width: auto;
+  }
+
+  .bntsCards a,
+  .bntsCards button {
+    width: 5.3rem;
   }
 }

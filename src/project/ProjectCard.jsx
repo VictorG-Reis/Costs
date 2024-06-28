@@ -23,7 +23,7 @@ function ProjectCard({id,text, budget, category, handleRemove}) {
 
       <div className={styles.bntsCards}>
         <Link to={`/project/${id}`}><FaPen fontSize="1.3rem"/> Editar </Link>
-        <button onClick={remove} ><FaTrash fontSize="1.2rem"/> Remover</button>
+        <button onClick={remove} ><FaTrash fontSize="1.3rem"/> Remover</button>
       </div> 
     </div>
   )
