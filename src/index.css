@@ -11,6 +11,7 @@ html,
 body,
 #root {
   background-color: #efefef;
+  height: 100vh;
 }
 
 ul {
