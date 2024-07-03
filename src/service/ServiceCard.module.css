@@ -1,11 +1,11 @@
 .project_card {
   padding: 1em;
   border-radius: 5px;
-  width: 320px;
-  height: 200px;
-  margin: 0.5%;
+  width: 22rem;
+  height: 15rem;
+  margin: 2rem;
+  box-shadow: 5px 4px 7.7px #00000042;
   background-color: #e2e2e2;
-  box-shadow: 5px 4px 7.7px #00000025;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,45 +18,39 @@
   color: #ffbb33;
   width: 15rem;
   padding: 0.4em;
-  margin-bottom: 1em;
   font-size: 1.3em;
   text-align: center;
   border-radius: 4px;
+  margin-bottom: 1rem;
+  margin-left: 10px;
+}
+
+.info_card {
+  background-color: red;
+  align-items: center;
+  justify-content: center;
+}
+
+.info_card p {
+  margin-top: 1rem;
+  align-items: center;
+  font-size: 5rem;
 }
 
 .project_card p {
   color: #000000;
   margin-bottom: 1em;
+  font-size: 1rem;
 }
+
 .project_card p span {
   font-weight: bold;
+  margin-left: 9px;
 }
 
-.category_text {
-  display: flex;
-  align-items: center;
-}
-.category_text span {
-  display: block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ccc;
-  margin-right: 5px;
-}
-
-.category_text .Infra {
-  background-color: #ffaebc;
-}
-
-.category_text .Desenvolvimento {
-  background-color: #a0e7e5;
-}
-.category_text .Desing {
-  background-color: #b4f8c8;
-}
-.category_text .Planejamento {
-  background-color: #ffd899;
+.info_description {
+  background-color: red;
+  height: fit-content;
 }
 
 .bntsCards {
@@ -68,30 +62,36 @@
   height: 50px;
 }
 
-.bntsCards a,
 .bntsCards button {
   padding: 0.6rem 1rem;
   background-color: #000000;
   color: #ffbb33;
-  border: none;
-  text-decoration: none;
   transition: 0.5s;
   cursor: pointer;
-  margin-right: 1rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 14px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   border-radius: 16px;
-  width: 120px;
-  height: 45px;
+  width: 20rem;
+  height: 3rem;
+  font-size: 1rem;
 }
 
-.bntsCards a:hover,
-.bntsCards button:hover {
-  background-color: #ffbb33;
-  color: #000000;
-  transition: 0.5s;
+@media (min-width: 300px) and (max-width: 575.98px) {
+  .project_card {
+    width: 15.5rem;
+  }
+
+  .project_card h4 {
+    width: 10rem;
+    height: fit-content;
+    margin-top: 1rem;
+  }
+
+  .info_description p {
+    width: fit-content;
+  }
+
+  .bntsCards button {
+    margin-bottom: 1.3rem;
+  }
 }

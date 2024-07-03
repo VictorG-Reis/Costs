@@ -3,7 +3,7 @@
 .ProjectInfo_Container {
   padding: 1rem;
   width: 100%;
-  overflow-y: visible;
+  overflow-y: hidden;
   margin-top: 1rem;
 }
 
@@ -88,8 +88,17 @@
   top: 5.5rem;
   right: 1rem;
 }
+.servicesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
 @media (min-width: 300px) and (max-width: 575.98px) {
+  .ProjectInfo_Container {
+    width: 100%;
+  }
   .ProjectInfo_Container h1 {
     height: 5rem;
     width: 100%;
@@ -103,13 +112,6 @@
     font-size: 1rem;
     margin-left: 10px;
     font-weight: 500;
-  }
-
-  .servicesContainer {
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    background-color: red;
   }
 }
 

@@ -172,14 +172,13 @@ function Project() {
               )}
             </div>
           </div>
-          <div className={styles.servicesContainer}>
             <h2>Serviços</h2>
-              <Conteiner custonClass='start'>
+          <div className={styles.servicesContainer}>
                 {
-                Service.map((service)=> (
+                Service.map((service) => (
                 <ServiceCard
-                name = {service.name}
-                cost ={service.cost}
+                name={service.name}
+                cost={service.cost}
                 description={service.description}
                 id={service.id}
                 key={service.id}
@@ -188,7 +187,6 @@ function Project() {
                 ))
                 }
                 {Service.length === 0 && <p>Não há serviços cadastrados</p>}
-              </Conteiner>
           </div>
         <Conteiner/>
       </div>
