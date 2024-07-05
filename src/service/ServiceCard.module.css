@@ -22,19 +22,22 @@
   text-align: center;
   border-radius: 4px;
   margin-bottom: 1rem;
-  margin-left: 10px;
 }
 
 .info_card {
-  background-color: red;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  width: 16rem;
+  max-height: 10rem; /* Ajuste conforme necessário */
+  overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder a altura máxima */
 }
 
-.info_card p {
-  margin-top: 1rem;
-  align-items: center;
-  font-size: 5rem;
+.info_description {
+  width: 100%;
+  white-space: normal; /* Permite quebra de linha */
+  text-overflow: ellipsis;
+  row-gap: inherit;
 }
 
 .project_card p {
@@ -49,8 +52,7 @@
 }
 
 .info_description {
-  background-color: red;
-  height: fit-content;
+  width: fit-content;
 }
 
 .bntsCards {
@@ -87,8 +89,11 @@
     margin-top: 1rem;
   }
 
-  .info_description p {
-    width: fit-content;
+  .info_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .bntsCards button {

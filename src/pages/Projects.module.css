@@ -22,8 +22,8 @@
 
 .messagePosition {
   position: absolute;
-  top: 5.5rem;
-  right: 50rem;
+  top: 0rem;
+  right: 0rem;
 }
 
 @media (min-width: 300px) and (max-width: 575.98px) {
@@ -51,6 +51,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  .messagePosition {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
   }
 }
 
