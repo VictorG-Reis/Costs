@@ -35,7 +35,7 @@ function Project() {
       .catch((erro) => console.log(erro))
     },500)
 
-  }, [id, Service.length])
+  }, [id, ])
 
 
 
@@ -79,20 +79,24 @@ function Project() {
     projectUpdate.services = servicesUpdate
     projectUpdate.cost = parseFloat(projectUpdate.cost) - parseFloat(cost)
 
-    fetch(`${URL_API}/${projectUpdate.id}`, {
-      method: 'PATCH', 
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(projectUpdate)
-    })
-    .then((resp) => resp.json())
-    .then(() => {
-      setEditProject(projectUpdate)
-      setService(servicesUpdate)
-      setMessage('Serviço removido com sucesso!')
-      setTypeMessage('success')
-    })
-    .catch((err) => console.log(err))
+
+    setTimeout(() => {
+      fetch(`${URL_API}/${projectUpdate.id}`, {
+        method: 'PATCH', 
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(projectUpdate)
+      })
+      .then((resp) => resp.json())
+      .then(() => {
+        setEditProject(projectUpdate)
+        setService(servicesUpdate)
+        setMessage('Serviço removido com sucesso!')
+        setTypeMessage('success')
+      })
+      .catch((err) => console.log(err))
+    },500)
   }
+  
   function toggleProjectForm(){
     setShowProjectForm(!ShowProjectForm)
   }
