@@ -35,7 +35,7 @@ function Project() {
       .catch((erro) => console.log(erro))
     },500)
 
-  }, [id, Service ])
+  }, [id, Service, EditProject ])
 
 
 

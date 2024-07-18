@@ -10,7 +10,7 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
   const [categories, setCategories] = useState([])
   const [projects, setProjects] = useState({projectData})
   const [emptyImput, setEmptyImput] = useState(false)
-  const URL_API = 'https://costs-api-victor-gabriels-projects-73d017ac.vercel.app/projects'
+  const URL_API = 'https://costs-api-victor-gabriels-projects-73d017ac.vercel.app'
   
   useEffect(()=>{
     fetch(`${URL_API}/categories`, {
