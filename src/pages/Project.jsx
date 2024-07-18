@@ -40,7 +40,7 @@ function Project() {
       .catch((erro) => console.log(erro))
     },500)
 
-  }, [id, Service.length, EditProject])
+  }, [id, Service, EditProject])
 
 
 
