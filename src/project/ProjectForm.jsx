@@ -10,10 +10,10 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
   const [categories, setCategories] = useState([])
   const [projects, setProjects] = useState({projectData})
   const [emptyImput, setEmptyImput] = useState(false)
+  const URL_API = 'https://costs-api.vercel.app'
   
-
   useEffect(()=>{
-    fetch('http://localhost:5000/categories', {
+    fetch(`${URL_API}/categories`, {
       headers:{'Content-Type': 'application/json'},
       method: 'GET',
     })
@@ -21,7 +21,6 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
     .then((dados) => setCategories(dados))
     .then((err) => console.log(err))
   },[])
-
 
   const submit = (e) =>{
     e.preventDefault()
@@ -46,7 +45,7 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
       name: 'Infra'
     },
     })
-    }else{
+    }else {
     setProjects({...projects, category: {
       id: e.target.value,
       name: e.target.options[e.target.selectedIndex].text
@@ -55,7 +54,6 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
     }
   }
 
-
   return(
     <>
       <div className={styles.messagePosition}>
@@ -63,7 +61,6 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
       </div>
 
       <form onSubmit={submit} className={styles.form_container}>
-
         <div className={styles.form_inputs}>
           <h1>Seu novo projeto</h1>
           <p>Crie seu projeto para depois adicionar serviços</p>
@@ -79,7 +76,6 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
           <SubmitButton text={btnName}/>
         </div>
       </form>
-    
     </>
   )
 

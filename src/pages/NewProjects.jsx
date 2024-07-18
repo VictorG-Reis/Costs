@@ -4,6 +4,8 @@ import ProjectForm from '../project/ProjectForm'
 
 function NewProjects() {
 
+  const URL_API = 'https://costs-api.vercel.app'
+
   const navigate = useNavigate()
 
   const createPost = (project) => {
@@ -11,7 +13,7 @@ function NewProjects() {
     project.cost = 0
     project.services = []
 
-    fetch('http://localhost:5000/projects', {
+    fetch(`${URL_API}/projects`, {
       method: 'POST',
       headers: {
         'content-Type': 'application/json'

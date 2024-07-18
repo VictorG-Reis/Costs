@@ -20,14 +20,11 @@ function ServiceForm({handleSubmit, btnText, projectData}){
     }
     projectData.services.push(Service)
     handleSubmit(projectData)
-    
-
   }
 
   function handleChange(e){
     setService({...Service, [e.target.name]: e.target.value})
     setEmptyImput(false)
-      console.log(Service);
   }
 
 
@@ -60,7 +57,6 @@ function ServiceForm({handleSubmit, btnText, projectData}){
         <SubmitButton text={btnText}/>
     </form>
   )
-
 }
 
 export default ServiceForm

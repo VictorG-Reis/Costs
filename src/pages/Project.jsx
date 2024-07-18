@@ -21,10 +21,12 @@ function Project() {
   const [message, setMessage] = useState()
   const [TypeMessage, setTypeMessage] = useState()
 
+  const URL_API = 'https://costs-api.vercel.app'
+
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`http://localhost:5000/projects/${id}`, {
+      fetch(`${URL_API}/projects/${id}`, {
         method: 'GET',
         headers: {'Content-Type':'application/json'}
       })
@@ -46,9 +48,7 @@ function Project() {
     project.cost = 0
 
     const lastService = project.services[project.services.length - 1]
-    
     lastService.id = uuidv4()
-
     const lastServiceCost = lastService.cost
     
     const newCost = parseFloat(project.cost) + parseFloat(lastServiceCost)
@@ -61,23 +61,24 @@ function Project() {
     }
 
     project.cost = newCost
-
-
-    fetch(`http://localhost:5000/projects/${project.id}`, {
-      method :'PATCH',
-      headers:{ 'Content-Type':'application/json'},
-      body: JSON.stringify(project)
-    })
-    .then((resp)=> resp.json())
-    .then((data) =>{
-      console.log(data)
-      setMessage('serviço adicionado com sucesso!')
-      setTypeMessage('success')
-      if(ShowServiceForm){
-        setShowServiceForm(false)
-      }
-    })
-    .catch((err)=> console.log(err))
+    
+    setTimeout(() => {
+      fetch(`${URL_API}/projects/${project.id}`, {
+        method :'PATCH',
+        headers:{ 'Content-Type':'application/json'},
+        body: JSON.stringify(project)
+      })
+      .then((resp)=> resp.json())
+      .then((data) =>{
+        console.log(data)
+        setMessage('serviço adicionado com sucesso!')
+        setTypeMessage('success')
+        if(ShowServiceForm){
+          setShowServiceForm(false)
+        }
+      })
+      .catch((err)=> console.log(err))
+    },500)
   }
 
   function RemoveService(id, cost){
@@ -87,7 +88,7 @@ function Project() {
     projectUpdate.services = servicesUpdate
     projectUpdate.cost = parseFloat(projectUpdate.cost) - parseFloat(cost)
 
-    fetch(`http://localhost:5000/projects/${projectUpdate.id}`, {
+    fetch(`${URL_API}/projects/${projectUpdate.id}`, {
       method: 'PATCH', 
       headers: {'Content-Type': 'application.json'},
       body: JSON.stringify(projectUpdate)
@@ -113,7 +114,7 @@ function Project() {
   function EditPost(Project){
     setMessage('')
 
-    fetch(` http://localhost:5000/projects/${EditProject.id}`, {
+    fetch(`${URL_API}/projects/${EditProject.id}`, {
       method: 'PATCH',
       headers:{ 'Content-Type' : 'Application/json'},
       body: JSON.stringify(Project)

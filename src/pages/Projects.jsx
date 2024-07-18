@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import Button from "../layout/Button"
 import Conteiner from "../layout/Container"
-//import { useLocation } from "react-router-dom"
 import Message from "../layout/Message"
 import ProjectCard from "../project/ProjectCard"
 import Loading from "../layout/Loading"
@@ -9,22 +8,14 @@ import Loading from "../layout/Loading"
 import styles from './Projects.module.css'
 
 function Projects() {
-  
   const [Projects, setProjects] = useState([])
   const [RemoveLoading, setRemoveLoading] = useState(false)
   const [MessageProject, setMessageProject] = useState(false)
-  
-  //const location = useLocation()
-
-  // let message = ''
-  // if(location.state){
-  //   message= location.state.message
-  // }
-
+  const URL_API = 'https://costs-api.vercel.app/projects'
 
   useEffect(() => {
     setTimeout(() => {
-      fetch('http://localhost:5000/projects', {
+      fetch(`${URL_API}`, {
         method: 'GET',
         headers:{
         'Content-Type': 'application/json',
@@ -37,12 +28,10 @@ function Projects() {
       })
       .catch((err) => console.log(err))
     }, 1000)
-  },[])
-
-
+  },[Projects])
 
   const removeProject = (id) => {
-    fetch(`http://localhost:5000/projects/${id}`, {
+    fetch(`${URL_API}/${id}`, {
       method: 'DELETE',
       headers: {'Content-Type' : 'application/json'}
     })
@@ -55,7 +44,6 @@ function Projects() {
         }, 4000);
     })
     .catch((err) => console.log(err))
-    
   }
 
   return(

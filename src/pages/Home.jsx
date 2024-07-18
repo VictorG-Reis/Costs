@@ -7,7 +7,7 @@ function Home() {
     <section className={styles.home_container}>
       <div className={styles.home_infos}>
         <h1>Bem vindo ao <span>costs!</span></h1>
-        <p>Faça seu projeto</p>
+        <p>Faça o planejamento de custos dos seus projetos</p>
         <Button to='/newProject' text='Criar projeto'/>
       </div>
       <div className={styles.home_image}>
