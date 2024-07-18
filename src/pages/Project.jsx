@@ -72,7 +72,7 @@ function Project() {
     }, 500);
   };
 
-  const removeService = (id, cost) => {
+  const RemoveService = (id, cost) => {
     const servicesUpdate = editProject.services.filter((service) => service.id !== id);
     const projectUpdate = { 
       ...editProject, 
@@ -105,7 +105,7 @@ function Project() {
     setShowServiceForm(!showServiceForm);
   };
 
-  const editPost = (project) => {
+  const EditPost = (project) => {
     setMessage('');
 
     fetch(`${URL_API}/${editProject.id}`, {
@@ -125,68 +125,68 @@ function Project() {
 
   return (
     <>
-      {editProject ? (
-        <div className={styles.projectInfoContainer}>
-          <Container customClass='column' />
+      {editProject.text ? (
+      <div className={styles.ProjectInfo_Container }>
+        <Container custonClass='column'/>
           <div className={styles.messagePosition}>
-            {message && <Message msg={message} type={typeMessage} />}
+            {message && <Message msg={message} type={typeMessage}/>}
           </div>
-
-          <div className={styles.infoContainer}>
+          <div className={styles.info_Conteiner}>
             <div className={styles.resolve}>
               <h1> Projeto: {editProject.text}</h1>
-              <button className={styles.btn} onClick={toggleProjectForm}>
-                {!showProjectForm ? 'Editar projeto' : 'Fechar'}
-              </button>
+                <button className={styles.btn} onClick={toggleProjectForm}>
+                  {!showProjectForm ? 'Editar projeto': 'Fechar'}
+                </button>
             </div>
-            {!showProjectForm ? (
-              <div className={styles.infoContainer}>
-                <p><span>Categoria do Projeto: </span>{editProject.category?.name || 'Infra'}</p>
-                <p><span>Valor total do projeto: </span>R${editProject.budget}</p>
-                <p><span>Valor utilizado no projeto: </span>R${editProject.cost}</p>
-              </div>
-            ) : (
-              <div className={styles.infoContainer}>
-                <ProjectForm handleSubmit={editPost} btnName='Editar Projeto' projectData={editProject} />
-              </div>
-            )}
+              {!showProjectForm? (
+                <div className={styles.info_Conteiner} >
+                  <p><span>Categoria do Projeto: </span>
+                    {editProject.category?.name || 'Infra'} </p>
+                  <p><span>Valor total do projeto: </span>R${editProject.budget}</p>
+                  <p><span>Valor utilizado no projeto: </span>R${editProject.cost}</p>
+                </div>
+                ):(
+                  <div className={styles.info_Conteiner}>
+                    <ProjectForm handleSubmit={EditPost} btnName='Editar Projeto'  projectData={Project}/>
+                  </div>
+                )}
           </div>
-
-          <div className={styles.infoContainer}>
+          <div className={styles.info_Conteiner}>
             <div className={styles.resolve}>
               <h2>Adicionar serviço:</h2>
               <button className={styles.btn} onClick={toggleServiceForm}>
                 {!showServiceForm ? 'Adicionar serviço' : 'Fechar'}
               </button>
             </div>
-            <div className={styles.infoContainer}>
-              {showServiceForm && (
+            <div className={styles.info_Conteiner}>
+              {showServiceForm&&(
                 <div>
-                  <ServiceForm btnText='Adicione serviço' projectData={editProject} handleSubmit={createService} />
+                  <ServiceForm btnText='Adicione serviço' projectData={editProject} handleSubmit={createService}/>
                 </div>
               )}
             </div>
           </div>
-
-          <h2>Serviços</h2>
+            <h2>Serviços</h2>
           <div className={styles.servicesContainer}>
-            {services.map((service) => (
-              <ServiceCard
+                {
+                services.map((service) => (
+                <ServiceCard
                 name={service.name}
                 cost={service.cost}
                 description={service.description}
                 id={service.id}
                 key={service.id}
-                handleRemove={removeService}
-              />
-            ))}
-            {services.length === 0 && <p>Não há serviços cadastrados</p>}
+                handleRemove={RemoveService}
+                />   
+                ))
+                }
+                {services.length === 0 && <p>Não há serviços cadastrados</p>}
           </div>
-          <Container />
-        </div>
-      ) : (
-        <Loading />
-      )}
+        <Container/>
+      </div>
+    ):(
+      <Loading/>
+    )}
     </>
   );
 }
