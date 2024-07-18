@@ -29,8 +29,6 @@ function Project() {
       .then((data) => {
         setService(data.services)
         setEditProject(data)
-        console.log(Service.length);
-        console.log(data);
       })
       .catch((erro) => console.log(erro))
     },500)
@@ -62,8 +60,7 @@ function Project() {
         body: JSON.stringify(project)
       })
       .then((resp)=> resp.json())
-      .then((data) =>{
-        console.log(data)
+      .then(() =>{
         setMessage('serviço adicionado com sucesso!')
         setTypeMessage('success')
         if(ShowServiceForm){
