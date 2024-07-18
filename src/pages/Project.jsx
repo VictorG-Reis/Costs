@@ -21,12 +21,12 @@ function Project() {
   const [message, setMessage] = useState()
   const [TypeMessage, setTypeMessage] = useState()
 
-  const URL_API = 'https://costs-api.vercel.app'
+  const URL_API = 'https://costs-api.vercel.app/projects'
 
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`${URL_API}/projects/${id}`, {
+      fetch(`${URL_API}/${id}`, {
         method: 'GET',
         headers: {'Content-Type':'application/json'}
       })
@@ -40,7 +40,7 @@ function Project() {
       .catch((erro) => console.log(erro))
     },500)
 
-  }, [id])
+  }, [id, Service.length])
 
 
 
@@ -61,9 +61,9 @@ function Project() {
     }
 
     project.cost = newCost
-    
+
     setTimeout(() => {
-      fetch(`${URL_API}/projects/${project.id}`, {
+      fetch(`${URL_API}/${project.id}`, {
         method :'PATCH',
         headers:{ 'Content-Type':'application/json'},
         body: JSON.stringify(project)
@@ -88,7 +88,7 @@ function Project() {
     projectUpdate.services = servicesUpdate
     projectUpdate.cost = parseFloat(projectUpdate.cost) - parseFloat(cost)
 
-    fetch(`${URL_API}/projects/${projectUpdate.id}`, {
+    fetch(`${URL_API}/${projectUpdate.id}`, {
       method: 'PATCH', 
       headers: {'Content-Type': 'application.json'},
       body: JSON.stringify(projectUpdate)
@@ -114,7 +114,7 @@ function Project() {
   function EditPost(Project){
     setMessage('')
 
-    fetch(`${URL_API}/projects/${EditProject.id}`, {
+    fetch(`${URL_API}/${EditProject.id}`, {
       method: 'PATCH',
       headers:{ 'Content-Type' : 'Application/json'},
       body: JSON.stringify(Project)
