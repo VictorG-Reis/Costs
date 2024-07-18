@@ -40,7 +40,7 @@ function Project() {
       .catch((erro) => console.log(erro))
     },500)
 
-  }, [id, Service.length])
+  }, [id, Service.length, EditProject])
 
 
 
@@ -183,7 +183,7 @@ function Project() {
                 description={service.description}
                 id={service.id}
                 key={service.id}
-                handleRemove={RemoveService}
+                handleRemove={RemoveService(service.id, service.cost)}
                 />   
                 ))
                 }
