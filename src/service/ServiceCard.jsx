@@ -1,16 +1,13 @@
-import styles from './ServiceCard.module.css'
+import styles from './ServiceCard.module.css';
+import { BsFillTrashFill } from 'react-icons/bs';
 
-import {BsFillTrashFill} from 'react-icons/bs'
+function ServiceCard({ name, cost, description, id, handleRemove }) {
+  const remove = (e) => {
+    e.preventDefault();
+    handleRemove(id, cost);
+  };
 
-
-function ServiceCard({name, cost, description, id, handleRemove}){
-
-  const remove = (e)=>{
-    e.preventDefault()
-    handleRemove(id, cost)
-  }
-
-  return(
+  return (
     <div className={styles.project_card}>
       <div className={styles.info_card}>
         <h4>{name}</h4>
@@ -20,12 +17,12 @@ function ServiceCard({name, cost, description, id, handleRemove}){
       
       <div className={styles.bntsCards}>
         <button onClick={remove}>
-          <BsFillTrashFill/>
+          <BsFillTrashFill />
           Remover 
         </button>
       </div>
     </div>
-  )
+  );
 }
 
-export default ServiceCard
+export default ServiceCard;
