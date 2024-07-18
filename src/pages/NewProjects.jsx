@@ -4,7 +4,7 @@ import ProjectForm from '../project/ProjectForm'
 
 function NewProjects() {
 
-  const URL_API = 'https://costs-api.vercel.app/projects'
+  const URL_API = 'https://costs-api-victor-gabriels-projects-73d017ac.vercel.app/projects'
 
   const navigate = useNavigate()
 

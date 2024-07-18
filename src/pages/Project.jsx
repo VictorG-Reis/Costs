@@ -17,7 +17,7 @@ function Project() {
   const [ShowServiceForm, setShowServiceForm] = useState(false)
   const [message, setMessage] = useState()
   const [TypeMessage, setTypeMessage] = useState()
-  const URL_API = 'https://costs-api.vercel.app/projects'
+  const URL_API = 'https://costs-api-victor-gabriels-projects-73d017ac.vercel.app/projects'
 
   useEffect(() => {
     setTimeout(() => {

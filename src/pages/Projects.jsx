@@ -11,7 +11,7 @@ function Projects() {
   const [Projects, setProjects] = useState([])
   const [RemoveLoading, setRemoveLoading] = useState(false)
   const [MessageProject, setMessageProject] = useState(false)
-  const URL_API = 'https://costs-api.vercel.app/projects'
+  const URL_API = 'https://costs-api-victor-gabriels-projects-73d017ac.vercel.app/projects'
 
   useEffect(() => {
     setTimeout(() => {
