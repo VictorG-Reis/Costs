@@ -13,7 +13,7 @@ function ProjectForm({projectData, handleSubmit, btnName}) {
   const URL_API = 'https://costs-api-victor-gabriels-projects-73d017ac.vercel.app/projects'
   
   useEffect(()=>{
-    fetch(URL_API, {
+    fetch(`${URL_API}/categories`, {
       headers: {'Content-Type': 'application/json'},
       method: 'GET',
     })
