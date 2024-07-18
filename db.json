@@ -1,5 +1,19 @@
 {
-  "projects": [],
+  "projects": [
+    {
+      "id": "64eb",
+      "text": "novo",
+      "budget": "11000",
+      "cost": 0,
+      "services": [
+        {
+          "name": "tests",
+          "cost": "1000",
+          "id": "64f9063f-3521-49d4-97ba-47abdb68f867"
+        }
+      ]
+    }
+  ],
   "categories": [
     {
       "id": "1",

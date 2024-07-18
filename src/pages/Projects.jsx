@@ -15,11 +15,9 @@ function Projects() {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`${URL_API}`, {
+      fetch(URL_API, {
         method: 'GET',
-        headers:{
-        'Content-Type': 'application/json',
-        },
+        headers: {'Content-Type': 'application/json'}
       })
       .then((resp) => resp.json())
       .then((dados) => {
@@ -33,7 +31,7 @@ function Projects() {
   const removeProject = (id) => {
     fetch(`${URL_API}/${id}`, {
       method: 'DELETE',
-      headers: {'Content-Type' : 'application/json'}
+      headers: {'Content-Type': 'application/json'}
     })
     .then((resp) => resp.json())
     .then(() => {
@@ -63,7 +61,7 @@ function Projects() {
             Projects.map((project) => (
               <ProjectCard
               key={project.id}
-              text={project.text}
+              text={project?.text}
               budget={project.budget}
               category={project.category?.name || 'Infra'}
               id={project.id}
